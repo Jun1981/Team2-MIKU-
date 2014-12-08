@@ -1,0 +1,1 @@
+extern void jiki_calc(void);
