@@ -20,3 +20,5 @@ void PG_Load(void){
 	LoadDivGraph("../Img/miku/loop1007/loop7.png", 6, 6, 1, 48, 64, miku.GH_W[7], 1);//自機画像（ミクさん）右下
 }
 
+
+

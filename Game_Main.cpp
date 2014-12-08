@@ -7,7 +7,15 @@
 void Game_Main(void){
 
 
-	PG_Load();
+	
+
+	key_chk();//キーチェック
+	key_henkan();//キー変換
+	
+	pm();//プレイヤー計算
+	p_anime();//自キャラアニメーション
+
+	jiki_show();
 
 
 
