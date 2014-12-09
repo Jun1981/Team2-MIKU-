@@ -26,7 +26,17 @@
 #include "key_chk.h"
 #include "key_henkan.h"
 #include "keymap.h"
+#include "Map_Data.h"
 
 /////////
+
+//マップ
+#include "map_load.h"
+#include "map_show.h"
+//チェック
+#include  "mb_chk.h"
+#include "dia_chk.h"
+
+
 
 #endif

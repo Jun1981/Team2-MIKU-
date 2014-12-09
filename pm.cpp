@@ -1,59 +1,59 @@
 #include "include.h"
 
-
+int nokori[2];//残り距離　ｘ、ｙ
 
 void pm(void){
 	if (key.c != -1){
-
-		
-
-
-		//上下左右
+		//左
 		if (key.c == 2){
 			miku.muki = 2;
-			if (miku.x >= 0){ miku.x -= miku.spd; }
+			mb_chk(2,nokori);
+			miku.x -= nokori[0];
+			
 		}
 		if (key.c == 6){//右
 			miku.muki = 6;
-			//if( miku.x+miku.haba<=640){//右
-			//	miku.x+=miku.spd;
-			//}
-
-			miku.x += miku.spd;
-
-			if (miku.x + miku.haba <= 640){//右
+			mb_chk(6, nokori);
+			miku.x += nokori[0];
+			
 			}
-
-		}
+		//上
 		if (key.c == 4){
 			miku.muki = 4;
-			if (miku.y >= 0){//上
-				miku.y -= miku.spd;
-			}
+			mb_chk(4, nokori);
+			miku.y -= nokori[1];
+			
 		}
 		if (key.c == 0){//下
 			miku.muki = 0;
-			if (miku.y + miku.tate <= 480){//下
-				miku.y += miku.spd;
-			}
+			mb_chk(0, nokori);
+			miku.y += nokori[1];
+			
 		}
 
 		//ななめ
 
 		if (key.c == 3){//左上
-			if (miku.x > 0 && miku.y > 0){
-				miku.x -= miku.n_spd;
-				miku.y -= miku.n_spd;
-				miku.muki = 3;
-			}
-			else if (miku.x > 0 && miku.y <= 0){//左上で上にぶつかった時左に
-				miku.x -= miku.n_spd;
-				miku.muki = 2;
-			}
-			else if (miku.x <= 0 && miku.y > 0){//左上で左にぶつかった時上に
-				miku.y -= miku.n_spd;
-				miku.muki = 4;
-			}
+		//	if (miku.x > 0 && miku.y > 0){
+		//		/*miku.x -= miku.n_spd;
+		//		miku.y -= miku.n_spd;*/
+		//		miku.muki = 3;
+		//		dia_chk();//斜めチェック
+		//		mb_chk(3, nokori);
+
+		//		miku.x -= nokori[0];
+		//		miku.y = nokori[1];
+
+
+		//	}
+		//	else if (miku.x > 0 && miku.y <= 0){//左上で上にぶつかった時左に
+		//		miku.x -= miku.n_spd;
+		//		miku.muki = 2;
+		//	}
+		//	else if (miku.x <= 0 && miku.y > 0){//左上で左にぶつかった時上に
+		//		miku.y -= miku.n_spd;
+		//		miku.muki = 4;
+		//	}
 		}
 
 
